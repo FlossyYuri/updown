@@ -9,6 +9,10 @@ const Container = styled.header`
   display: grid;
   grid-template-columns: 240px 2fr 340px;
   margin-bottom: 8px;
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
 `;
 
 const Logo = styled.div`

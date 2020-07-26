@@ -27,6 +27,14 @@ const Main = () => {
             <MusicCard />
             <MusicCard />
             <MusicCard />
+            <MusicCard />
+            <MusicCard />
+            <MusicCard />
+            <MusicCard />
+            <MusicCard />
+            <MusicCard />
+            <MusicCard />
+            <MusicCard />
           </MusicsList>
         </MainBox>
         <RightAside />

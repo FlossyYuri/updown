@@ -10,7 +10,7 @@ const Margins = styled.div`
   margin-bottom: 67px;
 `;
 const Container = styled.div`
-  background-color: black;
+  background-color: var(--main-color);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: white;

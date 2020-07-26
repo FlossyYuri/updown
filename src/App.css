@@ -80,6 +80,7 @@ body {
   min-height: 100vh;
 }
 main {
+  margin-top: 84px;
   flex: 1;
   display: grid;
   grid-template-columns: 240px 2fr 240px;

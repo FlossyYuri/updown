@@ -31,7 +31,7 @@ const WeekArtist = styled.div`
 const ArtistImage = styled.img`
   max-height: 200px;
   margin-top: 4px;
-  border-radius: 4px;
+  border-radius: 8px;
 `;
 
 const ArtistName = styled.span`
@@ -48,10 +48,10 @@ const LeftAside = () => {
         <GenreItem>Dzukuta</GenreItem>
         <GenreItem>Trap</GenreItem>
         <GenreItem>Hiphop</GenreItem>
-        {/* <GenreItem>Marabenta</GenreItem>
+        <GenreItem>Marabenta</GenreItem>
         <GenreItem>Trap</GenreItem>
         <GenreItem>Hiphop</GenreItem>
-        <GenreItem>Marabenta</GenreItem> */}
+        <GenreItem>Marabenta</GenreItem>
         <GenreItem style={{ borderBottom: 'none' }}>Mais...</GenreItem>
       </GenreList>
       <WeekArtist>
