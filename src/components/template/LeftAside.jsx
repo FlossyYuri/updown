@@ -21,6 +21,7 @@ const GenreItem = styled.li`
 
 const WeekArtist = styled.div`
   margin-top: 8px;
+  margin-bottom: 8px;
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -51,7 +52,6 @@ const LeftAside = () => {
         <GenreItem>Marabenta</GenreItem>
         <GenreItem>Trap</GenreItem>
         <GenreItem>Hiphop</GenreItem>
-        <GenreItem>Marabenta</GenreItem>
         <GenreItem style={{ borderBottom: 'none' }}>Mais...</GenreItem>
       </GenreList>
       <WeekArtist>
