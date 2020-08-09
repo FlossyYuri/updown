@@ -1,14 +1,16 @@
-import React from 'react';
-import styled from 'styled-components';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import FastForwardIcon from '@material-ui/icons/FastForward';
-import FastRewindIcon from '@material-ui/icons/FastRewind';
+topimport React, { useState } from "react";
+import styled from "styled-components";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import FastForwardIcon from "@material-ui/icons/FastForward";
+import FastRewindIcon from "@material-ui/icons/FastRewind";
 // import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import ShareIcon from '@material-ui/icons/Share';
-import GetAppIcon from '@material-ui/icons/GetApp';
-import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
-import Cover from '../../assets/images/astroworld.jpg';
+import FavoriteIcon from "@material-ui/icons/Favorite";
+import ShareIcon from "@material-ui/icons/Share";
+import GetAppIcon from "@material-ui/icons/GetApp";
+import MonetizationOnIcon from "@material-ui/icons/MonetizationOn";
+import Cover from "../../assets/images/astroworld.jpg";
+// import Song from '../../assets/musics/topfloor.mp3'
+
 const Container = styled.div`
   background-color: white;
   box-shadow: var(--shadow-1);
@@ -69,6 +71,10 @@ const Interactions = styled.div`
   width: 250px;
 `;
 const PlayBar = () => {
+  const [playing, setPlaying] = useState(false);
+
+  const togglePlay = () => setPlaying(!playing);
+
   return (
     <Container>
       <MusicInfo>
@@ -81,23 +87,26 @@ const PlayBar = () => {
       <PlayDisplay>
         <BoldText>00:00 / 04:26</BoldText>
         <DisplayButtons>
-          <FastRewindIcon style={{ fontSize: '2rem' }} />
-          <PlayArrowIcon
-            style={{ fontSize: '2rem', color: 'var(--main-color)' }}
-          />
+          <FastRewindIcon style={{ fontSize: "2rem" }} />
+          <button onClick={togglePlay}>
+            <PlayArrowIcon
+              style={{ fontSize: "2rem", color: "var(--main-color)" }}
+            />
+            s
+          </button>
           <FastForwardIcon
-            style={{ fontSize: '2rem', color: 'var(--main-color)' }}
+            style={{ fontSize: "2rem", color: "var(--main-color)" }}
           />
         </DisplayButtons>
       </PlayDisplay>
       <Interactions>
-        <FavoriteIcon style={{ fontSize: '2.2rem', color: 'red' }} />
-        <ShareIcon style={{ fontSize: '2.2rem', color: 'var(--main-color)' }} />
+        <FavoriteIcon style={{ fontSize: "2.2rem", color: "red" }} />
+        <ShareIcon style={{ fontSize: "2.2rem", color: "var(--main-color)" }} />
         <GetAppIcon
-          style={{ fontSize: '2.2rem', color: 'var(--main-color)' }}
+          style={{ fontSize: "2.2rem", color: "var(--main-color)" }}
         />
         <MonetizationOnIcon
-          style={{ fontSize: '2.2rem', color: 'var(--main-color)' }}
+          style={{ fontSize: "2.2rem", color: "var(--main-color)" }}
         />
       </Interactions>
     </Container>
